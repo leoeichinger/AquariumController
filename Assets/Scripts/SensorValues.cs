@@ -3,6 +3,7 @@ using Uduino;
 
 public class SensorValues : MonoBehaviour
 {
+    /*
     UduinoManager uduino;
     float temp;
     UduinoDevice board;
@@ -18,6 +19,6 @@ public class SensorValues : MonoBehaviour
         Debug.Log(temp);
     }
 
-    
+    */
 
 }

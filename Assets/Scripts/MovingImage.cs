@@ -8,32 +8,33 @@ public class MovingImage : MonoBehaviour
     float xPos;
     public bool moveRight;
     public bool moveLeft;
-
-    public float right = -1;
+    float movementspeed;
 
     void Start() 
     {
-        xPos = image.transform.position.x;    
+        
     }
     void Update()
     {
+        movementspeed = Time.deltaTime *40 ;
+        xPos = image.transform.position.x;
 
-        if (xPos == 963.48)
+        if (xPos == 1503.48f)
         {
             moveRight = true;
-            moveLeft = false;
         }
-        if (xPos == -963.48)
+        if (xPos == -423.48f)
         {
-            moveLeft = true;
             moveRight = false;
         }
 
         if (moveRight)
         {
-            xPos = image.transform.position.x - 1; 
-            image.transform.position = new Vector3(xPos,-0.64718f,0);
+            image.transform.Translate(movementspeed * -1,0,0);
         }
-        
+        else
+        {
+            image.transform.Translate(movementspeed,0,0);
+        }
     }
 }
