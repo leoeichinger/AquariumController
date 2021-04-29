@@ -3,15 +3,13 @@ using Uduino;
 
 public class SensorValues : MonoBehaviour
 {
-    UduinoManager uduino = UduinoManager.Instance;
+    UduinoManager uduino;
     float temp;
     UduinoDevice board;
     void Start() 
     {
         uduino.pinMode(18, PinMode.Input); 
-    }
-    void Awake() 
-    {
+        uduino = UduinoManager.Instance;
         board = uduino.GetBoard("80LNano");
     }
     void Update()

@@ -10,7 +10,7 @@ void setup()
 {
   Serial.begin(115200);
 
-  uduino.setStaticIP(ip, gateway , subnet ); // IPAddress ip, IPAddress gateway, IPAddress subnet
+  uduino.setStaticIP(ip, gateway , subnet );
   uduino.connectWifi("cablelink_0472368", "ujD83F3ez3i-Pd;X");
 }
 
@@ -19,8 +19,7 @@ void loop()
   uduino.update();
 
   if (uduino.isConnected()) {
-    uduino.println("This Uduino is connected with a static IP");
-    uduino.delay(5000);
+
   }
 }
 
