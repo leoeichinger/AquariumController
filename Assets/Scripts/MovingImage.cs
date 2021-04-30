@@ -7,23 +7,18 @@ public class MovingImage : MonoBehaviour
 
     float xPos;
     public bool moveRight;
-    public bool moveLeft;
     float movementspeed;
 
-    void Start() 
-    {
-        
-    }
     void Update()
     {
-        movementspeed = Time.deltaTime *40 ;
+        movementspeed = Time.deltaTime * 20 ;
         xPos = image.transform.position.x;
 
-        if (xPos == 1503.48f)
+        if (image.transform.position.x >= 1503.48f)
         {
             moveRight = true;
         }
-        if (xPos == -423.48f)
+        if (image.transform.position.x <= -423.48f)
         {
             moveRight = false;
         }
