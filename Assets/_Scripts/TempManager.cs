@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class TempManager : MonoBehaviour
 {
@@ -8,6 +7,7 @@ public class TempManager : MonoBehaviour
     public float newTemp;
     int correction = 953;
     public Transform ht;
+    public Text currentTemp;
 
     void Start() 
     {
@@ -25,6 +25,7 @@ public class TempManager : MonoBehaviour
 
         if (oldTemp != newTemp)
         {   
+            currentTemp.text = newTemp.ToString() + "°";
             newTemp *= 35.2f;
             ht.position = new Vector3(540, correction + newTemp, 0);
         }

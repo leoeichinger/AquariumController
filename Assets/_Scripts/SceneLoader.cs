@@ -13,4 +13,8 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Temperature");
     }
+    public void LoadTempGraph()
+    {
+        SceneManager.LoadScene("TempGraph");
+    }
 }
